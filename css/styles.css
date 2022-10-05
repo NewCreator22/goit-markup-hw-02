@@ -1,7 +1,17 @@
+:root {
+  --primary-text-color: #ffffff;
+  --second-background-color: #2f303a;
+  --title-text-color: #212121;
+  --second-title-text-color: #757575;
+  --accent-color: #2196f3;
+}
+
 body {
   background-color: #ffffff;
   color: #212121;
   font-family: roboto, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 
 .list {
@@ -12,9 +22,24 @@ body {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* button */
 
 .button {
+  font-family: "Roboto";
+  cursor: pointer;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -26,15 +51,25 @@ body {
   border-radius: 4px;
 }
 
-.button.primery {
+/* .button.primery {
   color: #ffffff;
   background-color: #2196f3;
-  border-color: transparent;
 }
 
 .button.secondary {
   color: #212121;
   background-color: #f5f4fa;
+} */
+
+.button {
+  color: var(--title-text-color);
+  background-color: #f5f4fa;
+}
+
+.button:hover,
+.botton:focus {
+  color: var(--primary-text-color);
+  background-color: var(--accent-color);
 }
 
 /* __________HEADER_________ */
@@ -45,7 +80,7 @@ body {
   font-size: 26px;
   line-height: 1, 19;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .header-logo-Studio {
@@ -57,16 +92,18 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .header-list .link:hover,
-.header-list .link:focus {
-  color: #2196f3;
+.header-list .link:focus,
+.header-contact .link:hover,
+.header-contact .link:focus {
+  color: var(--accent-color);
 }
 
 .header-list .current {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .header-mail {
@@ -74,7 +111,7 @@ body {
   font-size: 14px;
   line-height: 1.33;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--second-title-text-color);
 }
 
 .header-tel {
@@ -82,13 +119,13 @@ body {
   font-size: 14px;
   line-height: 1.33;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--second-title-text-color);
 }
 
 /* ________________HIRO______________ */
 
 .hiro {
-  background-color: #2f303a;
+  background-color: var(--second-background-color);
 }
 
 .hiro-titel {
@@ -98,7 +135,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--primary-text-color);
 }
 
 /* ----------Наші особливості------ */
@@ -109,15 +146,13 @@ body {
   line-height: 1.14x;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .section-peculiarities p {
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--second-title-text-color);
 }
 
 /* --------------Чим ми займаємося-------------- */
@@ -127,7 +162,7 @@ body {
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 /* -------------Наша команда------------ */
@@ -141,11 +176,11 @@ body {
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .section-team li {
-  background: #ffffff;
+  background: var(--primary-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -157,7 +192,7 @@ body {
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .section-team p {
@@ -166,13 +201,13 @@ body {
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--second-title-text-color);
 }
 
 /* ------------Футер---------------- */
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--second-background-color);
 }
 
 .footer-logo {
@@ -181,11 +216,11 @@ body {
   font-size: 26px;
   line-height: 1, 19;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .footer-logo-Studio {
-  color: #ffffff;
+  color: var(--primary-text-color);
 }
 
 .footer-address {
@@ -194,7 +229,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--primary-text-color);
 }
 
 .footer-mail {
@@ -215,6 +250,13 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-contact .link:hover,
+.footer-contact .link:focus {
+  color: var(--accent-color);
+}
+
+/* ----------------Фыльтри-------------- */
+
 /* ---------------Портфоліо------------- */
 
 .portfolio-list h3 {
@@ -222,7 +264,7 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .portfolio-list p {
@@ -230,10 +272,10 @@ body {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--second-title-text-color);
 }
 
 .portfolio-list li {
-  background: #ffffff;
+  background: var(--primary-text-color);
   border: 1px solid #eeeeee;
 }
